@@ -1,0 +1,22 @@
+{
+  "name": "match22",
+  "version": "1.0.0",
+  "description": "A book recommendation platform",
+  "main": "code\\scripts\\main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisa-pug/match22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisa-pug/match22/issues"
+  },
+  "homepage": "https://github.com/lisa-pug/match22#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
