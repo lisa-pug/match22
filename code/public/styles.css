@@ -10,7 +10,6 @@ body {
   justify-content: space-between;
   padding: 12px 24px;
   border-bottom: 1px solid #e5e5e5;
-  font-family: system-ui, sans-serif;
 }
 
 .navbar-left {
@@ -62,17 +61,29 @@ body {
   border-color: #2563eb;
 }
 
-.navbar-auth-btn {
+.auth-pill {
+  display: flex;
+  align-items: center;
   background: #2563eb;
-  color: white;
-  padding: 10px 20px;
   border-radius: 999px;
+  overflow: hidden;
+}
+
+.auth-half {
+  color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
+  padding: 10px 18px;
   white-space: nowrap;
 }
 
-.navbar-auth-btn:hover {
-  background: #1d4ed8;
+.auth-half:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.auth-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
 }
