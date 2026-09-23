@@ -2,3 +2,77 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
 }
+
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: system-ui, sans-serif;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo-img {
+  height: 32px;
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.navbar-links a.active {
+  color: #2563eb;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-search {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+}
+
+.navbar-search:focus {
+  border-color: #2563eb;
+}
+
+.navbar-auth-btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.navbar-auth-btn:hover {
+  background: #1d4ed8;
+}

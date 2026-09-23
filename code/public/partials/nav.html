@@ -1,12 +1,17 @@
 <nav class="navbar">
-  <a href="/" class="navbar-logo">Match22</a>
-  <ul class="navbar-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/recommendations.html">Recommendations</a></li>
-    <li><a href="/discover.html">Discover</a></li>
-    <li><a href="mybooks.html">My Books</a></li>
-    <li><a href="/search.html">Search</a></li>
-    <li><a href="/signup.html">Sign up</a></li>
-    <li><a href="/signin.html">Sign in</a></li>
-  </ul>
+  <div class="navbar-left">
+    <a href="/" class="navbar-logo">
+      <img src="/assets/logo.png" alt="Logo" class="logo-img">
+    </a>
+    <ul class="navbar-links">
+      <li><a href="/recommendations.html">Recommendations</a></li>
+      <li><a href="/discover.html">Discover</a></li>
+      <li><a href="/mybooks.html">My Books</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar-right">
+    <input type="text" class="navbar-search" placeholder="Search">
+    <a href="/auth.html" class="navbar-auth-btn">Sign up / Sign in</a>
+  </div>
 </nav>
