@@ -4,6 +4,7 @@
   "description": "A book recommendation platform",
   "main": "code\\scripts\\main.js",
   "scripts": {
+    "start": "node code/scripts/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
