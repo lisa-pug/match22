@@ -32,7 +32,7 @@ body {
   align-items: center;
   display: flex;
   list-style: none;
-  gap: 24px;
+  gap: 48px;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -119,14 +119,14 @@ body {
   max-width: 800px;       /* adjust to taste — controls column width */
   margin-left: auto;
   margin-right: auto;
-  padding: 0 24px;         /* breathing room on smaller screens */
+  padding: 0 0px;         /* breathing room on smaller screens */
   text-align: center;  
   z-index: 1 ;
 }
 
 .page-wrapper {
   position: relative; /* anchor point for the backdrop */
-  min-height: 100vh;
+  min-height: calc(100vh - 270px);
   isolation: isolate;
 }
 
@@ -138,4 +138,61 @@ body {
   bottom: 0;         /* stretches to the bottom of .page-wrapper */
   background-color: #f9f9f9ff;
   z-index: 0;       /* sits behind the content */
+}
+
+
+.site-footer {
+  padding: 24px 0px 24px;
+  margin-top: 80px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  font-size: 14px;
+  color:#1a1a1a;
+}
+
+.footer-col a:hover {
+  color: #59b6fcff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #9ca3af;
+  margin-top: 32px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+@media (max-width: 600px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
