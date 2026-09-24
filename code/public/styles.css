@@ -94,7 +94,7 @@ body {
 }
 
 .auth-half:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .auth-divider {
@@ -136,7 +136,7 @@ body {
   top: -20px;       /* the "certain position" it starts from — adjust to taste */
   left: 0;
   right: 0;
-  bottom: -8  0px;         /* stretches to the bottom of .page-wrapper */
+  bottom: -80px;         /* stretches to the bottom of .page-wrapper */
   background-color: #f9f9f9ff;
   z-index: 0;       /* sits behind the content */
 }
@@ -239,5 +239,23 @@ body {
   position: absolute;
   top: 55px;
   z-index: 99;
-  transform-origin: top;
+  transform-origin: center;
+}
+
+.floaty-graphic:hover {
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% {
+      rotate: 0deg;
+  }
+
+  25% {
+      rotate: -2deg;
+  }
+
+  80% {
+      rotate: 2deg;
+  }
 }
