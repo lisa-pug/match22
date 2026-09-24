@@ -136,7 +136,7 @@ body {
   top: -20px;       /* the "certain position" it starts from — adjust to taste */
   left: 0;
   right: 0;
-  bottom: 0;         /* stretches to the bottom of .page-wrapper */
+  bottom: -8  0px;         /* stretches to the bottom of .page-wrapper */
   background-color: #f9f9f9ff;
   z-index: 0;       /* sits behind the content */
 }
