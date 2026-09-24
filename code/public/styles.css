@@ -8,68 +8,83 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
+  padding: 8px 24px 14px;
   border-bottom: 1px solid #e5e5e5;
+  min-height: 32px;
+  background-color: #f9f9f9ff;
 }
 
 .navbar-left {
+  align-items: center;
   display: flex;
   align-items: center;
   gap: 32px;
+  height: 100%;
 }
 
 .logo-img {
-  height: 32px;
+  align-items: center;
+  max-height: 32px;
   display: block;
 }
 
 .navbar-links {
+  align-items: center;
   display: flex;
   list-style: none;
   gap: 24px;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .navbar-links a {
+  align-items: center;
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 600;
   font-size: 14px;
+  height: 100%;
 }
 
 .navbar-links a.active {
-  color: #2563eb;
+  text-decoration: underline;
 }
 
 .navbar-right {
+  align-items: center;
   display: flex;
   align-items: center;
   gap: 16px;
+  height: 100%;
 }
 
 .navbar-search {
+  align-items: center;
   padding: 8px 16px;
   border: 1px solid #d1d5db;
   border-radius: 999px;
   font-size: 14px;
   width: 200px;
   outline: none;
+  height: 100%;
 }
 
 .navbar-search:focus {
-  border-color: #2563eb;
+  border-color: #59b6fcff;
 }
 
 .auth-pill {
+  align-items: center;
   display: flex;
   align-items: center;
-  background: #2563eb;
+  background: #59b6fcff;
   border-radius: 999px;
   overflow: hidden;
 }
 
 .auth-half {
+  align-items: center;
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -86,4 +101,41 @@ body {
   width: 1px;
   height: 20px;
   background: rgba(255, 255, 255, 0.4);
+}
+
+.floaty-logo {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 250px;
+  z-index: 100;
+  transform-origin: top;
+}
+
+.page-content {
+  position: relative;
+  margin-top: 210px;
+  max-width: 800px;       /* adjust to taste — controls column width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;         /* breathing room on smaller screens */
+  text-align: center;  
+  z-index: 1 ;
+}
+
+.page-wrapper {
+  position: relative; /* anchor point for the backdrop */
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+.grey-bg {
+  position: absolute;
+  top: -20px;       /* the "certain position" it starts from — adjust to taste */
+  left: 0;
+  right: 0;
+  bottom: 0;         /* stretches to the bottom of .page-wrapper */
+  background-color: #f9f9f9ff;
+  z-index: 0;       /* sits behind the content */
 }

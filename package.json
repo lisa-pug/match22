@@ -5,7 +5,9 @@
   "main": "code\\scripts\\main.js",
   "scripts": {
     "start": "node code/scripts/main.js",
+    "dev": "nodemon code/scripts/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/lisa-pug/match22#readme",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
