@@ -84,8 +84,36 @@ function validatePassword(password) {
 }
 
 async function signIn() {
-  const username = document.getElementById('username-input').value || null;
+  const username = document.getElementById('username-input').value.trim() || null;
   const password = document.getElementById('password-input').value || null;
+  if (username === null || password === null) {
+    alert("Please fill in both username and password.");
+    return;
+  }
+  else {
+    // start loading
+    const btn = document.getElementById('signInButton');
+    const originalText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<span class="loader"></span>';
+    // sign in
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+
+    const data = await res.json();
+    // stop loading
+    btn.disabled = false;
+    btn.innerHTML = originalText;
+    if (data.error) {
+      alert(data.error);
+    } else {
+      console.log('Logged in:', data);
+      window.location.href = 'index.html';
+    }
+  }
   console.log("todo");
   // do the loading stuff and disable log in button
 }

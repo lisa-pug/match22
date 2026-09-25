@@ -45,6 +45,32 @@ app.post('/api/signup', async (req, res) => {
   }
 });
 
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+
+    if (result.rows.length === 0) {
+      return res.status(400).json({ error: 'Invalid username or password' });
+    }
+
+    const user = result.rows[0];
+    const isMatch = await bcrypt.compare(password, user.password_hash);
+
+    if (!isMatch) {
+      return res.status(400).json({ error: 'Invalid username or password' });
+    }
+
+    // success — login is valid
+    res.json({ userid: user.userid, username: user.username });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Login failed' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
