@@ -9,11 +9,28 @@
 
     <div id="navbar-placeholder"></div>
     <script src="js\nav.js"></script>
+    <img src="\assets\fulllogo.png" alt="Logo" class="floaty-logo" style="height: 140px; top:60px;">
+    <img src="\assets\booksgraphic.png" class="floaty-graphic" style="right: 10%; top: 130px; height: 60px;">
+    <img src="\assets\openbookgraphic.png" class="floaty-graphic" style="left:9%; top:130px; height:45px;">
 
-    <h1>Sign in</h1>
-    <p>lorem ipsum</p>
+    <div class="page-wrapper">
+        <div class="grey-bg" style="top: -60px;"></div>
+        <main class="page-content">
+            <h1>Sign up</h1>
+            <p style="text-align: left; padding-left: 30%;">Username</p>
+            <input type="text" id="username-input" class="account-input" placeholder="6-24 characters">
+            <p style="text-align: left; padding-left: 30%;">Password</p>
+            <input type="password" id="password-input" class="account-input" placeholder="6-24 characters">
+            <br><br><input type="checkbox" onclick="showPword()">
+            <span style="text-align:left;font-weight:400;">Show password</span>
+            <p>Don't have an account? <a href="signup.html">Sign up</a> now!</p>
+            <br><button onclick="signIn()" class="bigButton" id="signInButton">Sign in</button>
+            <p id="successMsg" style="display: none; color: green;">Sign in successful! Redirecting...</p>
+        </main>
+    </div>
 
     <div id="footer-placeholder"></div>
     <script src="/js/footer.js"></script>
+    <script src="/js/accounts.js"></script>
 </body>
 </html>

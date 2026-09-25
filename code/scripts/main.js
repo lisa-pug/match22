@@ -27,7 +27,7 @@ app.post('/api/signup', async (req, res) => {
 
   try {
     // check username doesn't already exist
-    const existing = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+    const existing = await pool.query('SELECT * FROM users WHERE username = $1', [username]); // $1 prevents sql injects :)
     if (existing.rows.length > 0) {
       return res.status(400).json({ error: 'Username taken or account already exists' });
     }

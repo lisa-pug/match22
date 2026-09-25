@@ -82,3 +82,10 @@ function validatePassword(password) {
   }
   return upper && lower && num && spec;
 }
+
+async function signIn() {
+  const username = document.getElementById('username-input').value || null;
+  const password = document.getElementById('password-input').value || null;
+  console.log("todo");
+  // do the loading stuff and disable log in button
+}
