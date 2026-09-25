@@ -57,8 +57,7 @@ async function signUp() {
     alert(data.error);
   } else {
     document.getElementById('successMsg').style.display = 'block';
-    // AUTO LOG IN!!!!!
-    // REDIRECT!!!! window.location.href = 'quiz.html'
+    window.location.href = 'quiz.html';
   }
 }
 
