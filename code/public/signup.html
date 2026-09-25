@@ -9,11 +9,40 @@
 
     <div id="navbar-placeholder"></div>
     <script src="js\nav.js"></script>
+    <img src="\assets\fulllogo.png" alt="Logo" class="floaty-logo" style="height: 140px; top:60px;">
+    <img src="\assets\booksgraphic.png" class="floaty-graphic" style="right: 10%; top: 130px; height: 60px;">
+    <img src="\assets\openbookgraphic.png" class="floaty-graphic" style="left:9%; top:130px; height:45px;">
 
-    <h1>Sign up</h1>
-    <p>lorem ipsum</p>
+    <div class="page-wrapper">
+        <main class="page-content">
+            <h1>Sign up</h1>
+            <p style="text-align: left; padding-left: 30%;">Username</p>
+            <input type="text" id="username-input" class="account-input" placeholder="6-24 characters; don't include personal info!">
+            <p style="text-align: left; padding-left: 30%;">Password</p>
+            <input type="password" id="password-input" class="account-input" placeholder="6-24 characters; see below">
+            <br><br><input type="checkbox" onclick="showPword()">
+            <span style="text-align:left;font-weight:400;">Show password</span>
+            <p style="text-align: left; padding-left: 30%; font-weight:400; font-style:italic;">Passwords should have at least one of each:</p>
+            <ul style="text-align: left; padding-left: 30%; font-weight:400; font-style:italic;">
+                <li>capital letter</li>
+                <li>lowercase letter</li>
+                <li>number</li>
+                <li>special character</li>
+            </ul>
+            <p style="text-align: left; padding-left: 30%;">
+                Date of Birth
+                <span class="help" style="margin-left:40%;" onmouseover="showDOBhelp()" onmouseout="hideDOBhelp()">?</span>
+                <span class="help-box" id="signUpHelpBox">This is to ensure recommendations are age-appropriate :)</span>
+            </p>
+            <input type="date" id="dob" name="dob" class="account-input" style="font-family:'Roboto';">
+            <p>Already have an account? <a href="signin.html">Sign in</a> instead!</p>
+            <br><button onclick="signUp()" class="bigButton" id="signUpButton">Create Account</button>
+            <p id="successMsg" style="display: none; color: green;">Sign up successful! Redirecting... TO DEV: NEED TO WRITE AUTHENTICAET USER CODE N PUT THAT IN MAIN.JS</p>
+        </main>
+    </div>
 
     <div id="footer-placeholder"></div>
     <script src="/js/footer.js"></script>
+    <script src="/js/accounts.js"></script>
 </body>
 </html>

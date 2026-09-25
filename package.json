@@ -7,7 +7,6 @@
     "start": "node code/scripts/main.js",
     "dev": "nodemon code/scripts/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,10 @@
   },
   "homepage": "https://github.com/lisa-pug/match22#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "bcrypt": "^6.0.0",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
